@@ -27,7 +27,7 @@
         <form class="auth-form" id="signup-form">
           <label for="signup-name">Full name<input id="signup-name" name="name" autocomplete="name" placeholder="Your name" required /></label>
           <label for="signup-email">Work email<input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required /></label>
-          <label for="signup-password">Create password<input id="signup-password" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required /></label>
+          <label for="signup-password">Create password<input id="signup-password" name="password" type="password" autocomplete="new-password" placeholder="Create a strong password" minlength="8" required aria-describedby="password-rules" /><span class="password-rules" id="password-rules">Use 8+ characters with uppercase, lowercase, a number, and a special character.</span></label>
           <label class="checkbox-label terms-label"><input type="checkbox" name="terms" required /> I agree to the <a href="contact.html">Headquters terms</a></label>
           <button class="button button-primary" type="submit">Create account <span class="button-arrow">→</span></button>
           <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>

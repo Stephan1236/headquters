@@ -102,6 +102,20 @@ if (signupForm) {
       return;
     }
 
+    const password = document.querySelector('#signup-password').value;
+    const passwordIsAllowed =
+      password.length >= 8 &&
+      /[a-z]/.test(password) &&
+      /[A-Z]/.test(password) &&
+      /\d/.test(password) &&
+      /[^A-Za-z0-9]/.test(password);
+
+    if (!passwordIsAllowed) {
+      const status = document.querySelector('#signup-status');
+      status.textContent = 'Use 8+ characters with uppercase, lowercase, a number, and a special character.';
+      return;
+    }
+
     const status = document.querySelector('#signup-status');
     status.textContent = 'Account created in demo mode. Opening your portal...';
     window.setTimeout(() => {

@@ -1226,6 +1226,13 @@ img {
   font-weight: 700;
 }
 
+.password-rules {
+  color: #8a98a9;
+  font-size: 0.68rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
 .footer-wrap {
   display: flex;
   align-items: center;

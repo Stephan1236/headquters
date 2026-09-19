@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage your Headquters account settings." />
+    <title>Account | Headquters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="portal-body">
+    <div class="request-shell">
+      <header class="request-header"><a class="brand" href="portal.html"><span class="brand-mark">H</span><span>Headquters</span></a><a class="request-back" href="portal.html">← Back to portal</a></header>
+      <main class="request-main">
+        <div class="request-intro"><p class="portal-kicker">Personal settings</p><h1>Account</h1><p>Update your profile and workspace preferences.</p></div>
+        <form class="request-form account-form" id="account-form">
+          <div class="account-profile"><span class="account-avatar">S</span><div><strong>Stephan</strong><p>Workspace owner</p></div><button class="button button-secondary" type="button">Change photo</button></div>
+          <div class="request-form-grid"><label for="account-name">Full name<input id="account-name" name="name" value="Stephan" required /></label><label for="account-email">Email address<input id="account-email" name="email" type="email" value="stephan@northstarlabs.com" required /></label></div>
+          <label for="account-workspace">Workspace name<input id="account-workspace" name="workspace" value="Northstar Labs" required /></label>
+          <label for="account-timezone">Timezone<select id="account-timezone" name="timezone"><option>Central European Time (CET)</option><option>Greenwich Mean Time (GMT)</option><option>Eastern Time (ET)</option></select></label>
+          <div class="account-preferences"><h2>Notifications</h2><label class="preference-row"><span><strong>Weekly workspace summary</strong><small>Receive a Monday overview of your team's progress.</small></span><input type="checkbox" checked /></label><label class="preference-row"><span><strong>Request updates</strong><small>Get notified when a request changes status.</small></span><input type="checkbox" checked /></label></div>
+          <div class="request-form-actions"><a class="button button-secondary" href="portal.html">Cancel</a><button class="button button-primary" type="submit">Save changes</button></div>
+          <p class="form-status" id="account-status" role="status" aria-live="polite"></p>
+        </form>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

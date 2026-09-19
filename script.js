@@ -170,3 +170,38 @@ if (appointmentForm) {
     dateInput.min = today;
   });
 }
+
+const inviteButton = document.querySelector('#invite-button');
+const inviteStatus = document.querySelector('#invite-status');
+
+if (inviteButton && inviteStatus) {
+  inviteButton.addEventListener('click', () => {
+    inviteStatus.textContent = 'Invite flow ready. Connect your email service to send invitations.';
+  });
+}
+
+const teamSearch = document.querySelector('#team-search');
+const memberRows = document.querySelectorAll('.member-row');
+
+if (teamSearch && memberRows.length) {
+  teamSearch.addEventListener('input', () => {
+    const query = teamSearch.value.toLowerCase();
+    memberRows.forEach((row) => {
+      row.hidden = !row.textContent.toLowerCase().includes(query);
+    });
+  });
+}
+
+const accountForm = document.querySelector('#account-form');
+
+if (accountForm) {
+  accountForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!accountForm.checkValidity()) {
+      accountForm.reportValidity();
+      return;
+    }
+
+    document.querySelector('#account-status').textContent = 'Account changes saved.';
+  });
+}

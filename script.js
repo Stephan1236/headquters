@@ -29,12 +29,14 @@ if (contactForm) {
 
     const formData = new FormData(contactForm);
     const name = formData.get('name');
+    const email = formData.get('email');
     const company = formData.get('company');
     const interest = formData.get('interest');
     const message = formData.get('message');
     const subject = `Headquters enquiry from ${name}`;
     const body = [
       `Name: ${name}`,
+      `Email: ${email}`,
       `Company: ${company || 'Not provided'}`,
       `Topic: ${interest}`,
       '',
@@ -42,7 +44,18 @@ if (contactForm) {
     ].join('\n');
 
     window.location.href = `mailto:hello@headquters.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    status.textContent = 'Your email app is opening with the message ready to send.';
+    if (status) {
+      status.textContent = 'Your email app is opening with the message ready to send.';
+    }
     contactForm.reset();
+  });
+}
+
+const portalMenu = document.querySelector('#portal-menu');
+const portalSidebar = document.querySelector('#portal-sidebar');
+
+if (portalMenu && portalSidebar) {
+  portalMenu.addEventListener('click', () => {
+    portalSidebar.classList.toggle('open');
   });
 }

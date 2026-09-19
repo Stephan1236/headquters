@@ -8,6 +8,7 @@ A responsive multi-page website for Headquters, a growth-operations company focu
 - `solutions.html` — Planning, reporting, and workflow solutions
 - `about.html` — Company story and principles
 - `contact.html` — Contact details and demo form
+- `portal.html` — Client workspace dashboard with initiatives, metrics, and activity
 
 ## Run locally
 

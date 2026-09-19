@@ -133,3 +133,19 @@ socialButtons.forEach((button) => {
     status.textContent = `${provider} sign-in is ready for OAuth configuration.`;
   });
 });
+
+const requestForm = document.querySelector('#request-form');
+
+if (requestForm) {
+  requestForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!requestForm.checkValidity()) {
+      requestForm.reportValidity();
+      return;
+    }
+
+    const status = document.querySelector('#request-status');
+    status.textContent = 'Request submitted. Your Headquters team will follow up shortly.';
+    requestForm.reset();
+  });
+}

@@ -205,3 +205,26 @@ if (accountForm) {
     document.querySelector('#account-status').textContent = 'Account changes saved.';
   });
 }
+
+const taskFilters = document.querySelectorAll('.task-filter');
+const taskRows = document.querySelectorAll('.task-row');
+
+taskFilters.forEach((filter) => {
+  filter.addEventListener('click', () => {
+    taskFilters.forEach((item) => item.classList.remove('active'));
+    filter.classList.add('active');
+    const selected = filter.dataset.filter;
+    taskRows.forEach((row) => {
+      row.hidden = selected !== 'all' && row.dataset.state !== selected;
+    });
+  });
+});
+
+const addTaskButton = document.querySelector('#add-task-button');
+const taskStatus = document.querySelector('#task-status');
+
+if (addTaskButton && taskStatus) {
+  addTaskButton.addEventListener('click', () => {
+    taskStatus.textContent = 'Task creation is ready. Connect your workspace API to save new tasks.';
+  });
+}

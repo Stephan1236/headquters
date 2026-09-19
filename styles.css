@@ -1323,6 +1323,133 @@ img {
   accent-color: var(--primary-strong);
 }
 
+.projects-main {
+  max-width: 1080px;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.project-card,
+.task-panel {
+  border: 1px solid #e1e7ef;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.project-card {
+  padding: 20px;
+}
+
+.project-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-card h2 {
+  margin: 18px 0 4px;
+  color: #2d3b4f;
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.project-card p {
+  margin: 0 0 16px;
+  color: #909cac;
+  font-size: 0.72rem;
+}
+
+.project-card small {
+  display: block;
+  margin-top: 8px;
+  color: #9aa5b4;
+  font-size: 0.67rem;
+}
+
+.task-panel {
+  padding: 26px;
+}
+
+.task-filters {
+  display: flex;
+  gap: 5px;
+}
+
+.task-filter {
+  border: 0;
+  border-radius: 7px;
+  padding: 7px 10px;
+  background: transparent;
+  color: #8a98a9;
+  font: inherit;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.task-filter.active {
+  background: #e5f7f1;
+  color: #3eae95;
+  font-weight: 700;
+}
+
+.task-list {
+  display: grid;
+  margin-top: 18px;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-top: 1px solid #edf0f4;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.task-row input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-strong);
+}
+
+.task-row > span:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+
+.task-row strong,
+.task-row small {
+  display: block;
+}
+
+.task-row strong {
+  color: #435268;
+  font-size: 0.8rem;
+}
+
+.task-row small {
+  margin-top: 3px;
+  color: #99a4b2;
+  font-size: 0.68rem;
+}
+
+.task-assignee {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #d7e4ff;
+  color: #5577b7;
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+
 .auth-body {
   min-height: 100vh;
   display: grid;
@@ -1672,5 +1799,22 @@ img {
 
   .request-form-actions .button {
     width: 100%;
+  }
+
+  .page-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .page-toolbar > .button {
+    width: 100%;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .task-panel {
+    padding: 20px;
   }
 }

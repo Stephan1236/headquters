@@ -47,7 +47,9 @@ if (contactForm) {
     if (status) {
       status.textContent = 'Your email app is opening with the message ready to send.';
     }
-    contactForm.reset();
+    setTimeout(() => {
+      contactForm.reset();
+    }, 150);
   });
 }
 
@@ -57,5 +59,35 @@ const portalSidebar = document.querySelector('#portal-sidebar');
 if (portalMenu && portalSidebar) {
   portalMenu.addEventListener('click', () => {
     portalSidebar.classList.toggle('open');
+  });
+}
+
+const passwordToggle = document.querySelector('#password-toggle');
+const passwordInput = document.querySelector('#login-password');
+
+if (passwordToggle && passwordInput) {
+  passwordToggle.addEventListener('click', () => {
+    const isPassword = passwordInput.type === 'password';
+    passwordInput.type = isPassword ? 'text' : 'password';
+    passwordToggle.textContent = isPassword ? 'Hide' : 'Show';
+    passwordToggle.setAttribute('aria-label', `${isPassword ? 'Hide' : 'Show'} password`);
+  });
+}
+
+const loginForm = document.querySelector('#login-form');
+
+if (loginForm) {
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!loginForm.checkValidity()) {
+      loginForm.reportValidity();
+      return;
+    }
+
+    const status = document.querySelector('#login-status');
+    status.textContent = 'Demo login accepted. Opening your portal...';
+    window.setTimeout(() => {
+      window.location.href = 'portal.html';
+    }, 500);
   });
 }

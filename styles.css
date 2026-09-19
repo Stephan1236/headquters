@@ -755,6 +755,16 @@ img {
   gap: 18px;
 }
 
+.portal-login-link {
+  color: #617188;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.portal-login-link:hover {
+  color: #18263a;
+}
+
 .icon-button,
 .portal-menu {
   position: relative;
@@ -1013,6 +1023,134 @@ img {
 .activity-item b { color: #48576a; font-weight: 600; }
 .activity-item small { display: block; margin-top: 3px; color: #a6afbb; font-size: 0.65rem; }
 .portal-menu { display: none; }
+
+.auth-body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(110, 231, 200, 0.16), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(148, 169, 255, 0.18), transparent 36%),
+    #eef4fa;
+}
+
+.auth-shell {
+  width: min(100% - 32px, 460px);
+}
+
+.auth-card {
+  padding: 38px;
+  border: 1px solid #e1e8f0;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(31, 59, 88, 0.12);
+}
+
+.auth-brand {
+  color: #18263a;
+}
+
+.auth-heading {
+  margin: 48px 0 28px;
+}
+
+.auth-heading .eyebrow {
+  margin-bottom: 12px;
+}
+
+.auth-heading h1 {
+  margin: 0;
+  color: #18263a;
+  font-size: 2.4rem;
+  letter-spacing: -0.07em;
+}
+
+.auth-heading p:not(.eyebrow) {
+  margin: 10px 0 0;
+  color: #7b899b;
+}
+
+.auth-form {
+  display: grid;
+  gap: 18px;
+}
+
+.auth-form > label {
+  display: grid;
+  gap: 8px;
+  color: #526278;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.auth-form input:not([type="checkbox"]) {
+  width: 100%;
+  border: 1px solid #dbe3ec;
+  border-radius: 11px;
+  padding: 13px 14px;
+  background: #fbfcfe;
+  color: #18263a;
+  font: inherit;
+}
+
+.auth-form input:not([type="checkbox"]):focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 60px !important;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: #6280b2;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #718096;
+  font-size: 0.73rem;
+}
+
+.auth-options a,
+.auth-footer a {
+  color: #4f77b4;
+  font-weight: 700;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.checkbox-label input {
+  accent-color: var(--primary-strong);
+}
+
+.auth-footer {
+  margin: 24px 0 0;
+  color: #8794a5;
+  font-size: 0.78rem;
+  text-align: center;
+}
 
 .footer-wrap {
   display: flex;

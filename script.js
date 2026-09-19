@@ -31,6 +31,7 @@ if (contactForm) {
     const name = formData.get('name');
     const email = formData.get('email');
     const company = formData.get('company');
+    const companyAddress = formData.get('companyAddress');
     const interest = formData.get('interest');
     const message = formData.get('message');
     const subject = `Headquters enquiry from ${name}`;
@@ -38,6 +39,7 @@ if (contactForm) {
       `Name: ${name}`,
       `Email: ${email}`,
       `Company: ${company || 'Not provided'}`,
+      `Company address: ${companyAddress || 'Not provided'}`,
       `Topic: ${interest}`,
       '',
       message,

@@ -1138,6 +1138,10 @@ img {
   width: auto;
 }
 
+.appointment-main {
+  max-width: 820px;
+}
+
 .auth-body {
   min-height: 100vh;
   display: grid;

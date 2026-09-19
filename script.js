@@ -149,3 +149,24 @@ if (requestForm) {
     requestForm.reset();
   });
 }
+
+const appointmentForm = document.querySelector('#appointment-form');
+
+if (appointmentForm) {
+  const dateInput = document.querySelector('#appointment-date');
+  const today = new Date().toISOString().split('T')[0];
+  dateInput.min = today;
+
+  appointmentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!appointmentForm.checkValidity()) {
+      appointmentForm.reportValidity();
+      return;
+    }
+
+    const status = document.querySelector('#appointment-status');
+    status.textContent = 'Appointment requested. We will confirm the time by email.';
+    appointmentForm.reset();
+    dateInput.min = today;
+  });
+}

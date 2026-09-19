@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Submit a request to your Headquters team." />
+    <title>Submit request | Headquters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="portal-body">
+    <div class="request-shell">
+      <header class="request-header">
+        <a class="brand" href="portal.html"><span class="brand-mark">H</span><span>Headquters</span></a>
+        <a class="request-back" href="portal.html">← Back to portal</a>
+      </header>
+      <main class="request-main">
+        <div class="request-intro">
+          <p class="portal-kicker">Northstar Labs workspace</p>
+          <h1>Submit a request</h1>
+          <p>Tell us what your team needs and we will route it to the right person.</p>
+        </div>
+        <form class="request-form" id="request-form">
+          <div class="request-form-grid">
+            <label for="request-title">Request title<input id="request-title" name="title" placeholder="What do you need help with?" required /></label>
+            <label for="request-type">Request type<select id="request-type" name="type" required><option value="">Choose a type</option><option>Strategy</option><option>Campaign support</option><option>Reporting</option><option>Technical help</option><option>Other</option></select></label>
+          </div>
+          <label for="request-priority">Priority<select id="request-priority" name="priority" required><option>Normal - I can work around this</option><option>High - I need help this week</option><option>Urgent - blocking active work</option></select></label>
+          <label for="request-details">Details<textarea id="request-details" name="details" rows="7" placeholder="Add context, goals, and any useful links..." required></textarea></label>
+          <label for="request-link">Reference link <span>(optional)</span><input id="request-link" name="link" type="url" placeholder="https://" /></label>
+          <div class="request-form-actions"><a class="button button-secondary" href="portal.html">Cancel</a><button class="button button-primary" type="submit">Submit request <span class="button-arrow">→</span></button></div>
+          <p class="form-status" id="request-status" role="status" aria-live="polite"></p>
+        </form>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

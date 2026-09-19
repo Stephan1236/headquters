@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Book an appointment with your Headquters team." />
+    <title>Book appointment | Headquters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="portal-body">
+    <div class="request-shell">
+      <header class="request-header">
+        <a class="brand" href="portal.html"><span class="brand-mark">H</span><span>Headquters</span></a>
+        <a class="request-back" href="portal.html">← Back to portal</a>
+      </header>
+      <main class="request-main appointment-main">
+        <div class="request-intro">
+          <p class="portal-kicker">Northstar Labs workspace</p>
+          <h1>Book an appointment</h1>
+          <p>Choose a time that works for your team and tell us what you would like to cover.</p>
+        </div>
+        <form class="request-form" id="appointment-form">
+          <label for="appointment-topic">What would you like to discuss?<select id="appointment-topic" name="topic" required><option value="">Choose a topic</option><option>Weekly workspace check-in</option><option>Campaign strategy</option><option>Performance review</option><option>Product walkthrough</option><option>Other</option></select></label>
+          <div class="request-form-grid">
+            <label for="appointment-date">Preferred date<input id="appointment-date" name="date" type="date" required /></label>
+            <label for="appointment-time">Preferred time<select id="appointment-time" name="time" required><option value="">Choose a time</option><option>09:00 - 09:30</option><option>10:00 - 10:30</option><option>11:30 - 12:00</option><option>14:00 - 14:30</option><option>15:30 - 16:00</option></select></label>
+          </div>
+          <label for="appointment-type">Meeting type<select id="appointment-type" name="type" required><option>Video call</option><option>Phone call</option><option>In person</option></select></label>
+          <label for="appointment-attendees">Additional attendees <span>(optional)</span><input id="appointment-attendees" name="attendees" placeholder="Add email addresses separated by commas" /></label>
+          <label for="appointment-notes">Agenda or notes <span>(optional)</span><textarea id="appointment-notes" name="notes" rows="5" placeholder="What should we prepare before the meeting?"></textarea></label>
+          <div class="request-form-actions"><a class="button button-secondary" href="portal.html">Cancel</a><button class="button button-primary" type="submit">Request appointment <span class="button-arrow">→</span></button></div>
+          <p class="form-status" id="appointment-status" role="status" aria-live="polite"></p>
+        </form>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

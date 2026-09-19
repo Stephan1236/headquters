@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create your Headquters client portal account." />
+    <title>Sign up | Headquters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <main class="auth-shell">
+      <section class="auth-card" aria-labelledby="signup-title">
+        <a class="brand auth-brand" href="index.html" aria-label="Headquters home"><span class="brand-mark">H</span><span>Headquters</span></a>
+        <div class="auth-heading">
+          <p class="eyebrow">Get started</p>
+          <h1 id="signup-title">Create your account.</h1>
+          <p>Set up your workspace and bring your team into focus.</p>
+        </div>
+        <div class="social-login">
+          <button class="social-button google-button" type="button" data-provider="Google"><span class="google-mark">G</span> Sign up with Google</button>
+          <button class="social-button apple-button" type="button" data-provider="Apple"><span class="apple-mark">●</span> Sign up with Apple</button>
+        </div>
+        <div class="auth-divider"><span>or sign up with email</span></div>
+        <form class="auth-form" id="signup-form">
+          <label for="signup-name">Full name<input id="signup-name" name="name" autocomplete="name" placeholder="Your name" required /></label>
+          <label for="signup-email">Work email<input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required /></label>
+          <label for="signup-password">Create password<input id="signup-password" name="password" type="password" autocomplete="new-password" placeholder="Create a strong password" minlength="8" required aria-describedby="password-rules" /><span class="password-rules" id="password-rules">Use 8+ characters with uppercase, lowercase, a number, and a special character.</span></label>
+          <label class="checkbox-label terms-label"><input type="checkbox" name="terms" required /> I agree to the <a href="contact.html">Headquters terms</a></label>
+          <button class="button button-primary" type="submit">Create account <span class="button-arrow">→</span></button>
+          <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="auth-footer">Already have an account? <a href="login.html">Log in</a></p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

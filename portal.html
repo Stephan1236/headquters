@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Headquters client portal for tracking growth initiatives and team momentum." />
+    <title>Client Portal | Headquters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="portal-body">
+    <div class="portal-shell">
+      <aside class="portal-sidebar" id="portal-sidebar">
+        <a class="brand portal-brand" href="index.html"><span class="brand-mark">H</span><span>Headquters</span></a>
+        <div class="workspace-switcher"><span class="workspace-dot"></span><span><small>Workspace</small><strong>Northstar Labs</strong></span><span class="chevron">⌄</span></div>
+        <nav class="portal-nav" aria-label="Portal navigation">
+          <a class="portal-nav-link active" href="#overview"><span>▦</span> Overview</a>
+          <a class="portal-nav-link" href="#initiatives"><span>◈</span> Initiatives</a>
+          <a class="portal-nav-link" href="#analytics"><span>◒</span> Analytics</a>
+          <a class="portal-nav-link" href="teams.html"><span>◎</span> Teams</a>
+          <a class="portal-nav-link" href="projects.html"><span>▤</span> Projects & tasks</a>
+          <a class="portal-nav-link request-link" href="request.html"><span>＋</span> Submit request</a>
+          <a class="portal-nav-link request-link" href="appointment.html"><span>◷</span> Book appointment</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <a class="portal-nav-link" href="contact.html"><span>?</span> Help center</a>
+          <a class="portal-user" href="account.html"><span class="avatar">S</span><span><strong>Stephan</strong><small>Admin</small></span><span class="chevron">⌄</span></a>
+        </div>
+      </aside>
+      <main class="portal-main">
+        <header class="portal-header">
+          <button class="portal-menu" id="portal-menu" type="button" aria-label="Open portal menu">☰</button>
+          <div><p class="portal-kicker">Monday, September 19, 2026</p><h1>Good morning, Stephan <span>✦</span></h1></div>
+          <div class="portal-header-actions"><a class="portal-login-link" href="login.html">Log in</a><button class="icon-button" type="button" aria-label="Notifications">◔<i></i></button><a class="portal-header-avatar" href="account.html">S</a></div>
+        </header>
+        <section class="portal-content" id="overview">
+          <div class="portal-hero-card"><div><p class="eyebrow">Weekly pulse</p><h2>Your team is building momentum.</h2><p>Three initiatives moved forward this week. Keep the focus on the launch sprint to hit your quarterly goal.</p><a class="button button-primary" href="#initiatives">View initiatives <span class="button-arrow">→</span></a></div><div class="pulse-ring"><strong>78%</strong><span>on track</span></div></div>
+          <div class="portal-section-heading"><div><p class="portal-kicker">Workspace overview</p><h2>What is happening now</h2></div><button class="date-filter" type="button">Last 30 days <span>⌄</span></button></div>
+          <div class="portal-metrics">
+            <article class="portal-metric"><div class="metric-top"><span class="metric-icon mint">↗</span><span class="trend positive">+12.8%</span></div><strong>$1.24M</strong><span>Pipeline influenced</span><div class="sparkline mint-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="portal-metric"><div class="metric-top"><span class="metric-icon purple">◒</span><span class="trend positive">+8.4%</span></div><strong>42%</strong><span>Conversion rate</span><div class="sparkline purple-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="portal-metric"><div class="metric-top"><span class="metric-icon orange">◷</span><span class="trend neutral">On target</span></div><strong>18</strong><span>Days to next milestone</span><div class="progress-track"><span style="width: 64%"></span></div></article>
+          </div>
+          <div class="portal-columns">
+            <section class="portal-panel initiatives-panel" id="initiatives"><div class="panel-heading"><div><p class="portal-kicker">Across your workspace</p><h2>Active initiatives</h2></div><a class="text-link" href="#all-initiatives">View all <span>→</span></a></div><div class="initiative-list"><article class="initiative"><div class="initiative-icon launch">↗</div><div class="initiative-info"><div class="initiative-title"><strong>Q4 product launch</strong><span class="status on-track">On track</span></div><p>Launch campaign and activation</p><div class="initiative-progress"><span style="width: 74%"></span></div><small>74% complete · Due Oct 07</small></div></article><article class="initiative"><div class="initiative-icon target">◎</div><div class="initiative-info"><div class="initiative-title"><strong>Enterprise ABM sprint</strong><span class="status needs-review">Needs review</span></div><p>Build top-account pipeline</p><div class="initiative-progress"><span style="width: 48%"></span></div><small>48% complete · Due Oct 21</small></div></article><article class="initiative"><div class="initiative-icon chart">◒</div><div class="initiative-info"><div class="initiative-title"><strong>Customer insights loop</strong><span class="status on-track">On track</span></div><p>Turn feedback into decisions</p><div class="initiative-progress"><span style="width: 31%"></span></div><small>31% complete · Due Nov 04</small></div></article></div></section>
+            <section class="portal-panel activity-panel" id="analytics"><div class="panel-heading"><div><p class="portal-kicker">Team activity</p><h2>Recent updates</h2></div><a class="text-link" href="#activity">See all <span>→</span></a></div><div class="activity-list"><div class="activity-item"><span class="avatar small purple-avatar">AM</span><p><strong>Alex Morgan</strong> completed <b>Launch messaging</b><small>12 minutes ago</small></p></div><div class="activity-item"><span class="avatar small orange-avatar">SK</span><p><strong>Sam Kim</strong> left a comment on <b>Enterprise ABM sprint</b><small>2 hours ago</small></p></div><div class="activity-item"><span class="avatar small mint-avatar">RB</span><p><strong>Riley Brown</strong> added a new milestone<small>Yesterday at 4:32 PM</small></p></div></div></section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

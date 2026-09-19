@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage your Headquters workspace team." />
+    <title>Teams | Headquters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="portal-body">
+    <div class="request-shell">
+      <header class="request-header">
+        <a class="brand" href="portal.html"><span class="brand-mark">H</span><span>Headquters</span></a>
+        <a class="request-back" href="portal.html">← Back to portal</a>
+      </header>
+      <main class="request-main">
+        <div class="page-toolbar"><div class="request-intro"><p class="portal-kicker">Northstar Labs workspace</p><h1>Team members</h1><p>Invite teammates and manage access to your workspace.</p></div><button class="button button-primary" id="invite-button" type="button">＋ Invite member</button></div>
+        <section class="team-summary"><div><strong>8</strong><span>Active members</span></div><div><strong>3</strong><span>Pending invites</span></div><div><strong>4</strong><span>Teams</span></div></section>
+        <section class="team-list-panel"><div class="panel-heading"><div><p class="portal-kicker">Workspace access</p><h2>All members</h2></div><input class="team-search" id="team-search" type="search" placeholder="Search members" aria-label="Search members" /></div><div class="member-list" id="member-list"><article class="member-row"><span class="avatar purple-avatar">AM</span><div><strong>Alex Morgan</strong><small>alex@northstarlabs.com · Growth</small></div><span class="member-role">Admin</span><button class="member-menu" type="button" aria-label="Member options">•••</button></article><article class="member-row"><span class="avatar orange-avatar">SK</span><div><strong>Sam Kim</strong><small>sam@northstarlabs.com · Marketing</small></div><span class="member-role">Editor</span><button class="member-menu" type="button" aria-label="Member options">•••</button></article><article class="member-row"><span class="avatar mint-avatar">RB</span><div><strong>Riley Brown</strong><small>riley@northstarlabs.com · Product</small></div><span class="member-role">Editor</span><button class="member-menu" type="button" aria-label="Member options">•••</button></article><article class="member-row"><span class="avatar">S</span><div><strong>Stephan</strong><small>stephan@northstarlabs.com · Leadership</small></div><span class="member-role">Owner</span><button class="member-menu" type="button" aria-label="Member options">•••</button></article></div><p class="form-status" id="invite-status" role="status" aria-live="polite"></p></section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

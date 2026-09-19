@@ -91,3 +91,31 @@ if (loginForm) {
     }, 500);
   });
 }
+
+const signupForm = document.querySelector('#signup-form');
+
+if (signupForm) {
+  signupForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!signupForm.checkValidity()) {
+      signupForm.reportValidity();
+      return;
+    }
+
+    const status = document.querySelector('#signup-status');
+    status.textContent = 'Account created in demo mode. Opening your portal...';
+    window.setTimeout(() => {
+      window.location.href = 'portal.html';
+    }, 500);
+  });
+}
+
+const socialButtons = document.querySelectorAll('[data-provider]');
+
+socialButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const provider = button.dataset.provider;
+    const status = button.closest('.auth-card').querySelector('.form-status');
+    status.textContent = `${provider} sign-in is ready for OAuth configuration.`;
+  });
+});

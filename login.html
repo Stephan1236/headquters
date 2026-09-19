@@ -19,6 +19,11 @@
           <h1 id="login-title">Welcome back.</h1>
           <p>Log in to see your team's latest momentum.</p>
         </div>
+        <div class="social-login">
+          <button class="social-button google-button" type="button" data-provider="Google"><span class="google-mark">G</span> Continue with Google</button>
+          <button class="social-button apple-button" type="button" data-provider="Apple"><span class="apple-mark">●</span> Continue with Apple</button>
+        </div>
+        <div class="auth-divider"><span>or continue with email</span></div>
         <form class="auth-form" id="login-form">
           <label for="login-email">Work email<input id="login-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required /></label>
           <label for="login-password">Password<div class="password-field"><input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" minlength="8" required /><button type="button" class="password-toggle" id="password-toggle" aria-label="Show password">Show</button></div></label>
@@ -26,7 +31,7 @@
           <button class="button button-primary" type="submit">Log in <span class="button-arrow">→</span></button>
           <p class="form-status" id="login-status" role="status" aria-live="polite"></p>
         </form>
-        <p class="auth-footer">Need an account? <a href="contact.html">Talk to our team</a></p>
+        <p class="auth-footer">Need an account? <a href="signup.html">Create one</a></p>
       </section>
     </main>
     <script src="script.js"></script>

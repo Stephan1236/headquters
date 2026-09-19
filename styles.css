@@ -1075,6 +1075,69 @@ img {
   gap: 18px;
 }
 
+.social-login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  border: 1px solid #dbe3ec;
+  border-radius: 11px;
+  background: #fff;
+  color: #45566d;
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.social-button:hover {
+  border-color: #b9c8d9;
+  background: #f8fafc;
+}
+
+.google-mark,
+.apple-mark {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  font-weight: 800;
+}
+
+.google-mark {
+  color: #4285f4;
+  font-size: 1.05rem;
+}
+
+.apple-mark {
+  color: #18263a;
+  font-size: 0.88rem;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0;
+  color: #9aa6b5;
+  font-size: 0.68rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #e5eaf0;
+}
+
 .auth-form > label {
   display: grid;
   gap: 8px;
@@ -1150,6 +1213,17 @@ img {
   color: #8794a5;
   font-size: 0.78rem;
   text-align: center;
+}
+
+.terms-label {
+  color: #718096;
+  font-size: 0.73rem;
+  font-weight: 400;
+}
+
+.terms-label a {
+  color: #4f77b4;
+  font-weight: 700;
 }
 
 .footer-wrap {
